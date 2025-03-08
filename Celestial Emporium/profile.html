@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile - Celestial Emporium</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <button id="theme-toggle" aria-label="Toggle color theme">
+        <span id="theme-icon" aria-hidden="true">☀️</span>
+    </button>
+
+    <header>
+        <h1 class="site-title-small">Your Profile - Celestial Emporium</h1>
+    </header>
+
+    <main>
+        <section id="profile-content">
+            <h2>Your Profile</h2>
+
+            <div id="profile-details">
+                <p><strong>Username:</strong> <span id="profile-username"></span></p>
+                <p><strong>Email:</strong> <span id="profile-email"></span></p>
+            </div>
+
+            <h2>Edit Profile</h2>
+            <form id="profile-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+
+                <button type="submit">Update Profile</button>
+            </form>
+            <p>
+                <a href="index.html">Back to Home</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Celestial Emporium. All rights reserved.</p>
+    </footer>
+
+    <script src="profile-script.js"></script>
+</body>
+
+</html>

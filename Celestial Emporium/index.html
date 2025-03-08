@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Emporium: Where Stars Align with Style</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body> 
+    <button id="theme-toggle" aria-label="Toggle color theme">
+        <span id="theme-icon" aria-hidden="true">☀️</span>
+    </button>
+
+    <header>
+        <h1 class="site-title-small">Celestial Emporium: Where Stars Align with Style</h1>
+    </header>
+
+    <main>
+        <!-- This <main> element has overflow-y: auto in CSS for proper scrolling -->
+        <aside id="sidebar" aria-label="Navigation Menu">
+            <h2>Menu</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li>
+                        <a href="#">Product Categories</a>
+                        <ul id="category-menu">
+                            <li><a href="#" data-category="All">All Products</a></li>
+                            <li><a href="#" data-category="Apparel">Apparel</a></li>
+                            <li><a href="#" data-category="Home">Home Decor</a></li>
+                            <li><a href="#" data-category="Food">Food & Drink</a></li>
+                            <li><a href="#" data-category="Accessories">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><span id="datetime"></span></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <button id="open-sidebar" aria-label="Open sidebar" aria-expanded="false">☰</button>
+
+        <div id="product-list-container">
+            <div id="search-and-filter">
+                <div id="search-container">
+                    <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products">
+                    <button id="search-button" aria-label="Search">🔎</button>
+                </div>
+                <div id="sort-options">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" onchange="sortProducts(this.value)" aria-label="Sort by">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="category-filters">
+                <button data-category="All">All</button>
+                <button data-category="Apparel">Apparel</button>
+                <button data-category="Home">Home</button>
+                <button data-category="Food">Food & Drink</button>
+                <button data-category="Accessories">Accessories</button>
+            </div>
+
+            <section id="product-list" aria-label="Product List"></section>
+        </div>
+
+        <aside id="cart-container" class="cart-container" aria-label="Shopping Cart">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div id="total-price" class="total-price">Total: $0.00</div>
+            <div id="cart-status"></div>
+            <button id="checkout-button" class="checkout-button">Proceed to Checkout</button>
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2023 Celestial Emporium. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- The dynamically created modal will be appended to the document body -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
